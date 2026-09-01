@@ -1,0 +1,85 @@
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------
+   GLOBAL BASE
+------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brandBg text-brandText font-sans antialiased;
+}
+
+/* -----------------------------
+   TYPOGRAPHY
+------------------------------*/
+.h1 {
+  @apply font-serif text-5xl font-semibold leading-tight;
+}
+
+.h2 {
+  @apply font-serif text-4xl font-semibold;
+}
+
+.h3 {
+  @apply font-serif text-2xl font-medium;
+}
+
+.text-muted {
+  @apply text-brandMuted;
+}
+
+/* -----------------------------
+   BUTTONS
+------------------------------*/
+@layer components {
+  .btn-primary {
+    @apply bg-black text-white px-6 py-3 rounded-full
+           font-medium transition hover:bg-neutral-800;
+  }
+
+  .btn-secondary {
+    @apply border border-black px-6 py-3 rounded-full
+           font-medium transition hover:bg-black hover:text-white;
+  }
+
+  .btn-outline {
+    @apply border border-slate-300 px-4 py-2 rounded-full
+           hover:bg-slate-100 transition;
+  }
+
+  /* -----------------------------
+     INPUTS
+  ------------------------------*/
+  .input {
+    @apply w-full px-5 py-3 rounded-full
+           border border-slate-300 bg-white text-sm
+           focus:outline-none focus:ring-2 focus:ring-black;
+  }
+
+  /* -----------------------------
+     CARDS
+  ------------------------------*/
+  .card {
+    @apply bg-brandSurface rounded-2xl shadow-sm
+           transition hover:shadow-md;
+  }
+
+  /* -----------------------------
+     SECTION WRAPPER
+  ------------------------------*/
+  .section {
+    @apply max-w-7xl mx-auto px-6 py-20;
+  }
+}
+
+/* -----------------------------
+   ACCESSIBILITY
+------------------------------*/
+:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 3px;
+}
